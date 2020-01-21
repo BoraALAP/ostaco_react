@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from "react";
 
-function App() {
+import appContext from "./context/context";
+import appReducer, { initialState } from "./context/reducer";
+
+import { ThemeProvider } from "styled-components";
+import { LightTheme, DarkTheme } from "./styles/theme";
+import GlobalStyle from "./styles/global";
+import Tv from "./pages/Tv";
+
+const App = props => {
+  const [store, dispatch] = useReducer(appReducer, initialState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <appContext.Provider value={{ store, dispatch }}>
+      <ThemeProvider theme={store.theme ? DarkTheme : LightTheme}>
+        <GlobalStyle />
+        {/* <Head>
+          <title>Ostaco </title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head> */}
+        <Tv />
+      </ThemeProvider>
+    </appContext.Provider>
   );
-}
+};
 
 export default App;
