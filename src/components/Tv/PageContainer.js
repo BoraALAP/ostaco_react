@@ -12,16 +12,18 @@ import Products from "./Products";
 import BottomTwo from "./BottomTwo";
 import Footer from "./Footer";
 
-import Product1 from "../../assets/image/product1pro.png";
 import Image1 from "../../assets/image/product1img.png";
-
-import Product2 from "../../assets/image/product2pro.png";
 import Image2 from "../../assets/image/product2img.png";
 import Cross from "../../assets/icons/cross";
 
 const PageContainer = props => {
   const { store, dispatch } = useContext(appContext);
   const [load, setLoad] = useState(false);
+
+  const Product1 =
+    "https://studio204.sirv.com/Window%201/Window%201.spin?fullscreen=false&zoom=0";
+  const Product2 =
+    "https://studio204.sirv.com/Window%202/Window%202.spin?fullscreen=false&zoom=0";
 
   useEffect(() => {
     setLoad(true);

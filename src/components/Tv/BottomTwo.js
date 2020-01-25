@@ -47,13 +47,13 @@ const BottomTwo = props => {
             }}
           />
         </Parallax>
-        <Parallax y={[-35, 35]}>
+        <Parallax y={[-25, 15]}>
           <ParallaxCache />
           <ParallaxBanner
             layers={[
               {
                 image: Image2,
-                amount: 0.3
+                amount: 0.2
               }
             ]}
             style={{

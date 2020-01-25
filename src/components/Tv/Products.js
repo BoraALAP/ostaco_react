@@ -11,7 +11,12 @@ const Products = props => {
     <Fade cascade duration={2500}>
       <Container reverse={props.reverse}>
         <ImageBox reverse={props.reverse}>
-          <ImgPro src={props.product} reverse={props.reverse} />
+          {/* <ImgPro src={props.product} reverse={props.reverse} /> */}
+          <ImgPro
+            className="Sirv"
+            data-src={props.product}
+            reverse={props.reverse}
+          />
           <Parallax y={[-10, 10]}>
             <ParallaxCache />
             <Img
@@ -23,7 +28,7 @@ const Products = props => {
                 }
               ]}
               style={{
-                height: "400px"
+                height: "500px"
               }}
             />
           </Parallax>
@@ -71,7 +76,7 @@ const Container = styled.div`
 const ImageBox = styled.div`
   display: grid;
   background-color: ${({ theme }) => theme.color.gold_bg};
-  padding: 15% 10%;
+  padding: 35% 10%;
   grid-area: imageBox;
   position: relative;
   z-index: -1;
@@ -92,15 +97,14 @@ const Img = styled(ParallaxBanner)`
   `};
 `;
 
-const ImgPro = styled.img`
-  height: 70%;
+const ImgPro = styled.div`
+  height: 70% !important;
   position: absolute;
   z-index: 20;
-  top: 15%;
-  left: 15%;
   ${Media.greaterThan("medium")`
-    left: ${props => (props.reverse ? "auto" : "15%")};
-    right: ${props => (props.reverse ? "15%" : "auto")};
+  top: 15%;
+    right: ${props => (props.reverse ? "auto" : "15%")};
+    left: ${props => (props.reverse ? "15%" : "auto")};
   `}
 `;
 

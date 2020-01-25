@@ -14,8 +14,8 @@ const Tv = props => {
 
   return (
     <Container>
-      {!store.siteLoading ? <PageContainer /> : <PagePreloader />}
-      {/* <PageContainer /> */}
+      {/* {!store.siteLoading ? <PageContainer /> : <PagePreloader />} */}
+      <PageContainer />
     </Container>
   );
 };

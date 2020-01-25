@@ -67,6 +67,7 @@ const Container = styled.div`
   padding: 5%;
   box-sizing: border-box;
   grid-gap: 5%;
+  z-index: 200;
 
   .parallax-outer {
     align-items: center;
@@ -124,7 +125,7 @@ const MainButton = styled.div`
   grid-auto-flow: column;
   grid-gap: 24px;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 30%;
 
   span {
     display: grid;
