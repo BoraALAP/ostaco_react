@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import Media from "styled-media-query";
-import { Parallax, ParallaxBanner } from "react-scroll-parallax";
-import ParallaxCache from "../../helper/ParallaxCache";
+
+import YoutubeBackground from "react-youtube-background";
 
 import Logo from "../../assets/ostaco_logo";
 import Arrow from "../../assets/arrow";
 
-import WelcomeImg from "../../assets/image/welcome.png";
 import appContext from "../../context/context";
 
 const Welcome = props => {
@@ -39,20 +38,9 @@ const Welcome = props => {
           </p>
         </div>
       </TextBox>
-      <Parallax y={[-10, 10]}>
-        <ParallaxCache />
-        <ParallaxBanner
-          layers={[
-            {
-              image: WelcomeImg,
-              amount: 0.1
-            }
-          ]}
-          style={{
-            height: "400px"
-          }}
-        />
-      </Parallax>
+
+      <YoutubeBackground videoId={"stG7c_P3dwE"} className={"videobox"} />
+
       <MainButton onClick={openMenu}>
         <span>How did you like the Show?</span>
         <Arrow />
@@ -72,6 +60,26 @@ const Container = styled.div`
   .parallax-outer {
     align-items: center;
     display: grid;
+  }
+
+  .videobox {
+    position: initial;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    .Player__videoContainer___2TVqS {
+      position: initial;
+      ${Media.greaterThan("medium")`
+        position: absolute;
+      `};
+    }
+    ${Media.greaterThan("medium")`
+      height: 60%;
+      position: absolute;
+      right: 0;
+      top: 20%;
+      width: 50%;
+    `}
   }
 
   ${Media.greaterThan("medium")`
@@ -99,21 +107,6 @@ const LogoS = styled.div`
     max-width: 200px;
   }
 `;
-
-// const ImageBox = styled.div`
-//   background-image: url(${WelcomeImg});
-//   background-position: center;
-//   background-size: cover;
-//   display: grid;
-//   align-self: center;
-
-//   height: 300px;
-
-//   ${Media.greaterThan("medium")`
-//   height: 70%;
-//   width: 112.5%;
-//   `}
-// `;
 
 const MainButton = styled.div`
   background: ${({ theme }) => theme.color.white};

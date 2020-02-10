@@ -21,17 +21,15 @@ const PageContainer = props => {
   const [load, setLoad] = useState(false);
 
   const Product1 =
-    "https://studio204.sirv.com/Window%201/Window%201.spin?fullscreen=false&zoom=0";
+    "https://studio204.sirv.com/Window%201/WindowONE.spin?fullscreen=false&zoom=0";
   const Product2 =
-    "https://studio204.sirv.com/Window%202/Window%202.spin?fullscreen=false&zoom=0";
+    "https://studio204.sirv.com/Window%202/Window2New.spin?fullscreen=false&zoom=0";
 
   useEffect(() => {
     setLoad(true);
   }, []);
 
-  const afterOpenModal = () => {
-    console.log("opened");
-  };
+  const afterOpenModal = () => {};
 
   const closeModal = () => {
     dispatch({ type: "TOGGLE_FORM" });

@@ -1,8 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const SecondaryButton = props => {
-  return <Container>{props.text}</Container>;
+const SecondaryButton = ({ onClick, text, type = "button" }) => {
+  return onClick ? (
+    <Container onClick={onClick} type={type}>
+      {text}
+    </Container>
+  ) : (
+    <Container type={type}>{text}</Container>
+  );
 };
 
 const Container = styled.button`

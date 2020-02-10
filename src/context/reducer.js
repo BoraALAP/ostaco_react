@@ -7,7 +7,6 @@ export const initialState = {
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case "TOGGLE_FORM":
-      console.log("nay");
       return { ...state, form: !state.form };
     case "LOADING":
       return { ...state, siteLoading: false };

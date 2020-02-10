@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { useFormik } from "formik";
 import styled from "styled-components";
@@ -8,6 +8,7 @@ import InputText from "../Ui/InputText";
 import InputCheckbox from "../Ui/InputCheckbox";
 import PrimaryButton from "../Ui/PrimaryButton";
 import SecondaryButton from "../Ui/SecondaryButton";
+import appContext from "../../context/context";
 
 const validate = values => {
   const errors = {};
@@ -34,7 +35,7 @@ const validate = values => {
 
 const Form = () => {
   const formUrl = process.env.REACT_APP_GOOGLE_SHEET;
-  console.log(formUrl);
+  const { dispatch } = useContext(appContext);
   const [status, setStatus] = useState({
     result: "",
     sending: false,
@@ -50,12 +51,17 @@ const Form = () => {
       consideration: ""
     },
     validate,
-
+    resetForm: {
+      name: "",
+      email: "",
+      province: "",
+      interested: "",
+      consideration: ""
+    },
     onSubmit: (values, { resetForm }) => {
       setStatus({
         ...status,
         sending: true
-        // sent: false
       });
       const post = async () => {
         try {
@@ -75,37 +81,55 @@ const Form = () => {
           if (res.status && res.status === 200) {
             setStatus({
               sending: false,
-              // sent: true,
+              sent: true,
               result: "We have got your input, Thank you"
             });
           } else {
             setStatus({
               sending: false,
-              // sent: true,
+              sent: true,
               result: "Something is wrong, Please try again to send it again"
             });
           }
         } catch (err) {}
       };
       post();
-      resetForm({
-        name: "",
-        email: "",
-        province: "",
-        interested: "",
-        consideration: ""
-      });
+      resetForm();
     }
   });
 
-  const sentConfirm = () => <p>{status.result}</p>;
+  const formClose = () => {
+    dispatch({ type: "TOGGLE_FORM" });
+    setStatus({
+      result: "",
+      sending: false,
+      sent: false
+    });
+  };
+  const sentConfirm = () => {
+    if (status.sending) {
+      return <p>sending</p>;
+    } else if (status.sent) {
+      return (
+        <div>
+          <p>{status.result}</p>
+          <PrimaryButton text="Close form" onClick={formClose} />
+        </div>
+      );
+    }
+  };
 
   return (
     <Container>
-      {status.sending ? (
-        <p>sending</p>
+      {status.sending || status.sent ? (
+        sentConfirm()
       ) : (
-        <FormS onSubmit={formik.handleSubmit}>
+        <FormS
+          onReset={formik.initialValues}
+          onSubmit={formik.handleSubmit}
+
+          // onChange={formik.handleFormChange}
+        >
           <InputText
             name="name"
             label="First Name"
@@ -123,7 +147,7 @@ const Form = () => {
             placeholder="type your email"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.name}
+            value={formik.values.email}
           />
 
           <InputText
@@ -133,7 +157,7 @@ const Form = () => {
             placeholder="type your province or state"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.name}
+            value={formik.values.province}
           />
 
           <h6>What product are you interested in?</h6>
@@ -212,7 +236,7 @@ const Form = () => {
             onBlur={formik.handleBlur}
           />
           <ButtonContainer>
-            <SecondaryButton type="reset" text="Reset" />
+            <SecondaryButton text="Reset" />
             <PrimaryButton type="submit" text="Submit" />
           </ButtonContainer>
         </FormS>

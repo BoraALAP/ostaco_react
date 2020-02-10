@@ -90,6 +90,7 @@ const GlobalStyle = createGlobalStyle`
   .ReactModal__Overlay{
     display:grid;
     background-color: rgba(0,0,0,0.8)!important;
+    z-index: 300;
   }
 
   .ReactModal__Body--open{
