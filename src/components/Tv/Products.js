@@ -6,24 +6,21 @@ import Media from "styled-media-query";
 import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 import ParallaxCache from "../../helper/ParallaxCache";
 
-const Products = props => {
+const Products = ({ information }) => {
+  const { title, image, product, details, reverse } = { ...information };
+
   return (
     <Fade cascade duration={2500}>
-      <Container reverse={props.reverse}>
-        <ImageBox reverse={props.reverse}>
-          {/* <ImgPro src={props.product} reverse={props.reverse} /> */}
-          <ImgPro
-            className="Sirv"
-            data-src={props.product}
-            reverse={props.reverse}
-          />
+      <Container reverse={reverse}>
+        <ImageBox reverse={reverse}>
+          <ImgPro className="Sirv" data-src={product} reverse={reverse} />
           <Parallax y={[-10, 10]}>
             <ParallaxCache />
             <Img
-              reverse={props.reverse}
+              reverse={reverse}
               layers={[
                 {
-                  image: props.image,
+                  image: image,
                   amount: 0.2
                 }
               ]}
@@ -32,25 +29,20 @@ const Products = props => {
               }}
             />
           </Parallax>
-          {/* <Img src={props.image} reverse={props.reverse} /> */}
         </ImageBox>
-        <DetailsBox reverse={props.reverse}>
+        <DetailsBox reverse={reverse}>
           <div>
-            <h3>Prism</h3>
+            <h3>{title}</h3>
           </div>
-          <Details reverse={props.reverse}>
+          <Details reverse={reverse}>
             <h4>Details</h4>
-            <Box reverse={props.reverse}>
+            <Box reverse={reverse}>
               <ul>
-                <li>Rated Most efficient by Energy Star</li>
-                <li>Internal steel reinforcement channel to ensure optimal</li>
-                <li>Engineered for bigger openings</li>
-                <li>
-                  Aiming to give that modern look, and contemporary style to any
-                  renovation or new construction
-                </li>
+                {details.map((detail, index) => (
+                  <li key={index}>{detail}</li>
+                ))}
               </ul>
-              <BGBox reverse={props.reverse} />
+              <BGBox reverse={reverse} />
             </Box>
           </Details>
         </DetailsBox>
@@ -76,7 +68,7 @@ const Container = styled.div`
 const ImageBox = styled.div`
   display: grid;
   background-color: ${({ theme }) => theme.color.gold_bg};
-  padding: 35% 10%;
+  padding: 25% 10%;
   grid-area: imageBox;
   position: relative;
   z-index: -1;
@@ -89,22 +81,25 @@ const Img = styled(ParallaxBanner)`
   display: grid;
   position: relative;
   width: 90%;
-  left: 30%;
+
   opacity: 1;
   align-self: center;
   ${Media.greaterThan("medium")`
-    left: ${props => (props.reverse ? "-20%" : "30%")};
+    
   `};
 `;
 
 const ImgPro = styled.div`
-  height: 70% !important;
+  height: 60% !important;
+  top: 20%;
   position: absolute;
   z-index: 20;
+
   ${Media.greaterThan("medium")`
   top: 15%;
-    right: ${props => (props.reverse ? "auto" : "15%")};
-    left: ${props => (props.reverse ? "15%" : "auto")};
+  height: 70% !important;
+    right: ${props => (props.reverse ? "auto" : "-40%")};
+    left: ${props => (props.reverse ? "-40%" : "auto")};
   `}
 `;
 

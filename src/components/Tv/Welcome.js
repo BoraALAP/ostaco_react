@@ -54,7 +54,7 @@ const Container = styled.div`
   display: grid;
   padding: 5%;
   box-sizing: border-box;
-  grid-gap: 5%;
+  grid-gap: 2em;
   z-index: 200;
 
   .parallax-outer {
@@ -110,22 +110,22 @@ const LogoS = styled.div`
 
 const MainButton = styled.div`
   background: ${({ theme }) => theme.color.white};
-
-  padding: 16px 5%;
+  z-index: 300;
+  padding: 1em 5%;
   border: none;
   justify-content: start;
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 24px;
+  grid-gap: 1.5em;
   align-items: center;
-  margin-bottom: 30%;
+  margin-bottom: 1.5em;
 
   span {
     display: grid;
     color: ${({ theme }) => theme.color.main};
     font-weight: ${({ theme }) => theme.font.weight.bold};
     font-family: ${({ theme }) => theme.font.family.header};
-    font-size: 16px;
+    font-size: 1em;
   }
 
   ${Media.greaterThan("medium")`

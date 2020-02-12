@@ -7,7 +7,7 @@ import Media from "styled-media-query";
 
 import Form from "./Form";
 import appContext from "../../context/context";
-import Welcome from "./Welcome";
+import Welcome2 from "./Welcome2";
 import Products from "./Products";
 import BottomTwo from "./BottomTwo";
 import Footer from "./Footer";
@@ -20,10 +20,38 @@ const PageContainer = props => {
   const { store, dispatch } = useContext(appContext);
   const [load, setLoad] = useState(false);
 
-  const Product1 =
-    "https://studio204.sirv.com/Window%201/WindowONE.spin?fullscreen=false&zoom=0";
-  const Product2 =
+  const Product1Link =
     "https://studio204.sirv.com/Window%202/Window2New.spin?fullscreen=false&zoom=0";
+
+  const Product2Link =
+    "https://studio204.sirv.com/Window%201/WindowONE.spin?fullscreen=false&zoom=0";
+
+  const Product1 = {
+    title: "Prism",
+    image: Image2,
+    product: Product1Link,
+    details: [
+      "Rated Most efficient by Energy Star",
+      "Well designed space",
+      "Internal steel reinforcement channel to ensure optimal",
+      "Engineered for bigger openings",
+      "Aiming to give that modern look, and contemporary style to any renovation or new construction"
+    ],
+    reverse: false
+  };
+
+  const Product2 = {
+    title: "Enersense",
+    image: Image1,
+    product: Product2Link,
+    details: [
+      "Rated Most efficient by Energy Star",
+      "The design and look of a traditional window made to exceed today’s standards",
+      "Interior available in Cherry, Oak, Pine and Celluar PVC. Other wood species upon special request",
+      "Heavy duty hinge for larger triple pane units"
+    ],
+    reverse: true
+  };
 
   useEffect(() => {
     setLoad(true);
@@ -37,9 +65,9 @@ const PageContainer = props => {
   return (
     <ParallaxProvider>
       <Container loading={load ? "1" : "0"}>
-        <Welcome />
-        <Products product={Product1} image={Image1} />
-        <Products product={Product2} image={Image2} reverse />
+        <Welcome2 />
+        <Products information={Product1} />
+        <Products information={Product2} />
         <BottomTwo />
         <Footer />
 
