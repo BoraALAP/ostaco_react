@@ -1,0 +1,138 @@
+{  "finishes": [
+  {
+    "Name": "Alpine",
+    "Value": "alpine",
+    "ImageUrl": "/static/img/finish/alpine.jpg",
+    "Id": "alpine",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Cabernet",
+    "Value": "cabernet",
+    "ImageUrl": "/static/img/finish/cabernet.jpg",
+    "Id": "cabernet",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Chestnut",
+    "Value": "chestnut",
+    "ImageUrl": "/static/img/finish/chestnut.jpg",
+    "Id": "chestnut",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Cypress",
+    "Value": "cypress",
+    "ImageUrl": "/static/img/finish/cypress.jpg",
+    "Id": "cypress",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Granite",
+    "Value": "granite",
+    "ImageUrl": "/static/img/finish/granite.jpg",
+    "Id": "granite",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Indigo",
+    "Value": "indigo",
+    "ImageUrl": "/static/img/finish/indigo.jpg",
+    "Id": "indigo",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Onyx",
+    "Value": "onyx",
+    "ImageUrl": "/static/img/finish/onyx.jpg",
+    "Id": "onyx",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Ruby Red",
+    "Value": "ruby-red",
+    "ImageUrl": "/static/img/finish/ruby-red.jpg",
+    "Id": "ruby-red",
+    "FinishTypeSelection": 2,
+    "Selected": false
+  },
+  {
+    "Name": "Autumn Harvest",
+    "Value": "autumn-harvest",
+    "ImageUrl": "/static/img/finish/autumn-harvest.jpg",
+    "Id": "autumn-harvest",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "Barley",
+    "Value": "barley",
+    "ImageUrl": "/static/img/finish/barley.jpg",
+    "Id": "barley",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "Driftwood",
+    "Value": "driftwood",
+    "ImageUrl": "/static/img/finish/driftwood.jpg",
+    "Id": "driftwood",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "Mulberry",
+    "Value": "mulberry",
+    "ImageUrl": "/static/img/finish/mulberry.jpg",
+    "Id": "mulberry",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "New Earth",
+    "Value": "new-earth",
+    "ImageUrl": "/static/img/finish/new-earth.jpg",
+    "Id": "new-earth",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "Raven",
+    "Value": "raven",
+    "ImageUrl": "/static/img/finish/raven.jpg",
+    "Id": "raven",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "Redwood",
+    "Value": "redwood",
+    "ImageUrl": "/static/img/finish/redwood.jpg",
+    "Id": "redwood",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "Rustic Clay",
+    "Value": "rustic-clay",
+    "ImageUrl": "/static/img/finish/rustic-clay.jpg",
+    "Id": "rustic-clay",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  },
+  {
+    "Name": "Wildflower Honey",
+    "Value": "wildflower-honey",
+    "ImageUrl": "/static/img/finish/wildflower-honey.jpg",
+    "Id": "wildflower-honey",
+    "FinishTypeSelection": 1,
+    "Selected": false
+  }
+]}

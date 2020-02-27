@@ -1,0 +1,136 @@
+{
+  "configurations": [
+    {
+      "Pattern": 0,
+      "NumberOfSidelites": 0,
+      "NumberOfDoors": 1,
+      "HasTransom": false,
+      "Name": "Single",
+      "DesignName": "single",
+      "IsHighEnd": false,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": false,
+      "AcceptsTransom": false
+    },
+    {
+      "Pattern": 1,
+      "NumberOfSidelites": 0,
+      "NumberOfDoors": 1,
+      "HasTransom": true,
+      "Name": "Single with Transom",
+      "DesignName": "single-with-transom",
+      "IsHighEnd": true,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": false,
+      "AcceptsTransom": true
+    },
+    {
+      "Pattern": 2,
+      "NumberOfSidelites": 1,
+      "NumberOfDoors": 1,
+      "HasTransom": false,
+      "Name": "Single with Left Sidelite",
+      "DesignName": "single-with-left-sidelite",
+      "IsHighEnd": false,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": true,
+      "AcceptsTransom": false
+    },
+    {
+      "Pattern": 2,
+      "NumberOfSidelites": 1,
+      "NumberOfDoors": 1,
+      "HasTransom": false,
+      "Name": "Single with Right Sidelite",
+      "DesignName": "single-with-right-sidelite",
+      "IsHighEnd": false,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": true,
+      "AcceptsTransom": false
+    },
+    {
+      "Pattern": 3,
+      "NumberOfSidelites": 2,
+      "NumberOfDoors": 1,
+      "HasTransom": false,
+      "Name": "Single with Sidelites",
+      "DesignName": "single-with-sidelites",
+      "IsHighEnd": false,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": true,
+      "AcceptsTransom": false
+    },
+    {
+      "Pattern": 4,
+      "NumberOfSidelites": 2,
+      "NumberOfDoors": 1,
+      "HasTransom": true,
+      "Name": "Single with Sidelites and Transom",
+      "DesignName": "single-with-sidelites-and-transom",
+      "IsHighEnd": true,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": true,
+      "AcceptsTransom": true
+    },
+    {
+      "Pattern": 5,
+      "NumberOfSidelites": 0,
+      "NumberOfDoors": 2,
+      "HasTransom": false,
+      "Name": "Double",
+      "DesignName": "double",
+      "IsHighEnd": false,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": false,
+      "AcceptsTransom": false
+    },
+    {
+      "Pattern": 6,
+      "NumberOfSidelites": 0,
+      "NumberOfDoors": 2,
+      "HasTransom": true,
+      "Name": "Double with Transom",
+      "DesignName": "double-with-transom",
+      "IsHighEnd": true,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": false,
+      "AcceptsTransom": true
+    },
+    {
+      "Pattern": 7,
+      "NumberOfSidelites": 2,
+      "NumberOfDoors": 2,
+      "HasTransom": false,
+      "Name": "Double with Sidelites",
+      "DesignName": "double-with-sidelites",
+      "IsHighEnd": false,
+      "IsMultiDoor": false,
+      "AcceptsSidelites": true,
+      "AcceptsTransom": false
+    },
+    {
+      "Pattern": 8,
+      "NumberOfSidelites": 0,
+      "NumberOfDoors": 3,
+      "HasTransom": false,
+      "Name": "Triple",
+      "DesignName": "triple",
+      "IsHighEnd": true,
+      "IsMultiDoor": true,
+      "AcceptsSidelites": false,
+      "AcceptsTransom": false
+    },
+    {
+      "Pattern": 9,
+      "NumberOfSidelites": 0,
+      "NumberOfDoors": 4,
+      "HasTransom": false,
+      "Name": "Quadruple",
+      "DesignName": "quadruple",
+      "IsHighEnd": true,
+      "IsMultiDoor": true,
+      "AcceptsSidelites": false,
+      "AcceptsTransom": false
+    }
+  ]
+}

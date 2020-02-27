@@ -1,0 +1,69 @@
+{
+  "doorSurrends": [
+    {
+      "StyleNumber": "TDG-FLTFLT",
+      "Surface": "Woodgrain",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tdg-fltflt.png"
+    },
+    {
+      "StyleNumber": "TDS-CCCFLT",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-cccflt.png"
+    },
+    {
+      "StyleNumber": "TDS-CCCPLN",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-cccpln.png"
+    },
+    {
+      "StyleNumber": "TDS-CRCFLT",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-crcflt.png"
+    },
+    {
+      "StyleNumber": "TDS-CRCPLN",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-crcpln.png"
+    },
+    {
+      "StyleNumber": "TDS-CRSFLT",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-crsflt.png"
+    },
+    {
+      "StyleNumber": "TDS-FLTFLT",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-fltflt.png"
+    },
+    {
+      "StyleNumber": "TDS-TRDFLT",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-trdflt.png"
+    },
+    {
+      "StyleNumber": "TDS-TRDFLT-K",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-trdflt-k.png"
+    },
+    {
+      "StyleNumber": "TDS-TRDFLU",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-trdflu.png"
+    },
+    {
+      "StyleNumber": "TDS-TRDFLU-K",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-trdflu-k.png"
+    },
+    {
+      "StyleNumber": "TDS-TRDPLN",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-trdpln.png"
+    },
+    {
+      "StyleNumber": "TDS-TRDPLN-K",
+      "Surface": "Smooth",
+      "ImageURL": "https://thermatru-renders.s3.amazonaws.com/renders/doorsurrounds/3/tds-trdpln-k.png"
+    }
+  ]
+}
